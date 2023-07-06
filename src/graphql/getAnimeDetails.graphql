@@ -1,0 +1,33 @@
+query AnimeDetails($perPage: Int, $id : Int){
+        Page(perPage: $perPage) {
+            media(id: $id, type: ANIME) {
+                id
+                title {
+                  romaji
+                  english
+                  native
+                }
+                description
+                episodes
+                genres
+                startDate {
+                  year
+                  month
+                  day
+                }
+                endDate {
+                  year
+                  month
+                  day
+                }
+                coverImage {
+                  large
+                }
+                bannerImage
+                externalLinks{
+                  site
+                  url
+                }
+            } 
+        }
+    }
